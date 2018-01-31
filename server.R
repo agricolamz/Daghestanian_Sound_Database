@@ -7,7 +7,7 @@ library(leaflet)
 
 function(input, output) {
 # by sound ------------------------------------------------------------      
-  database <- read.csv("database.csv", sep = "\t", stringsAsFactors = FALSE)
+  database <- read.csv("/app/database.csv", sep = "\t", stringsAsFactors = FALSE)
   final_sound <- unique(database[, c(1, 2, 5)])
   final_sound$segments <- "—"
   
@@ -51,7 +51,7 @@ function(input, output) {
     })
 
 # by feature ------------------------------------------------------------      
-  database <- read.csv("database.csv", sep = "\t", stringsAsFactors = FALSE)
+  database <- read.csv("/app/database.csv", sep = "\t", stringsAsFactors = FALSE)
   final_features <- unique(database[, c(1, 2, 5)])
   final_features$features <- "—"
   
@@ -97,7 +97,7 @@ function(input, output) {
   })  
 
 # bibliography ------------------------------------------------------------    
-  bibliography <- read.csv("bibliography.csv", sep = "\t", stringsAsFactors = FALSE)
+  bibliography <- read.csv("/app/bibliography.csv", sep = "\t", stringsAsFactors = FALSE)
   bibliography$language <- lingtypology::url.lang(bibliography$language)
   bibliography$language
   output$bibliography <- DT::renderDataTable(
