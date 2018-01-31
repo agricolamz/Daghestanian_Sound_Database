@@ -1,4 +1,4 @@
-my_packages = c("DT", "leaflet", "lingtypology", "dplyr", "markdown")
+my_packages = c("DT", "leaflet", "lingtypology", "dplyr")
 
 install_if_missing = function(p) {
   if (p %in% rownames(installed.packages()) == FALSE) {

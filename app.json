@@ -1,0 +1,16 @@
+{
+  "name": "daghestanian-sound-database",
+  "stack": "heroku-16",
+  "description": "This is the Daghestanian sound database created by V. Ivanova and G. Moroz",
+  "keywords": [
+    "sound systems",
+    "Daghestanina languages"
+  ],
+  "repository": "https://github.com/agricolamz/Daghestanian_Sound_Database",
+  "success_url": "/",
+  "buildpacks": [
+    {
+      "url": "https://github.com/virtualstaticvoid/heroku-buildpack-r.git#heroku-16"
+    }
+  ]
+}

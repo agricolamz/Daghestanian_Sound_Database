@@ -2,7 +2,6 @@ library(shiny)
 library(DT)
 library(lingtypology)
 library(dplyr)
-library(markdown)
 library(leaflet)
 
 function(input, output) {
@@ -44,7 +43,7 @@ function(input, output) {
     map.feature(final_sound$language,
                 features = final_sound$branch,
                 stroke.features = final_sound$segments,
-                stroke.color = "Set2",
+                stroke.color = "Set3",
                 label = final_sound$language,
                 popup = paste(final_sound$source),
                 label.hide = T)
@@ -90,7 +89,7 @@ function(input, output) {
     map.feature(final_features$language,
                 features = final_features$branch,
                 stroke.features = final_features$features,
-                stroke.color = "Set2",
+                stroke.color = "Set3",
                 label = final_features$language,
                 popup = paste(final_features$source),
                 label.hide = T)
